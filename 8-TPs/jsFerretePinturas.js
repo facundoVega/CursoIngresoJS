@@ -1,13 +1,38 @@
-/*3.	Para el departamento de Pinturas:
-A.	Al ingresar una temperatura en Fahrenheit debemos mostrar la temperatura en Centígrados con un mensaje concatenado (ej.: " 32 Fahrenheit son 0 centígrados").
-B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en Fahrenheit (ej.: "0  centígrados son 32 Fahrenheit ").
-*/
-function FahrenheitCentigrados () 
-{
-	
-}
 
-function CentigradosFahrenheit () 
-{
-	
-}
+var miAplicacion = angular.module("FerretePinturas", []);
+
+
+miAplicacion.controller("miControl", function($scope, $http){
+
+
+
+
+
+
+
+
+
+	$scope.valor={};
+
+
+
+	$scope.FahrenheitCentigrados=function()
+	{
+
+		alert($scope.valor.Temperatura + " Fahrenheit son " + (parseInt($scope.valor.Temperatura)-32 ) + "grados centigrados");
+
+
+	}
+
+
+	$scope.CentigradosFahrenheit=function()
+	{
+
+		alert($scope.valor.Temperatura + " grados centigrados son " + (parseInt($scope.valor.Temperatura)+32 ) + "Fahrenheit");	
+
+
+	}
+
+
+
+});

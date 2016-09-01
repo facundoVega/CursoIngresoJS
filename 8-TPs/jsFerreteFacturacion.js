@@ -1,17 +1,63 @@
-/*1.	Para el departamento de facturación:
-A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
-B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
-C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
-*/
-function Sumar () 
+
+
+var miAplicacion = angular.module("FerreteFacturacion", []);
+
+
+
+
+miAplicacion.controller("control1", function($scope, $http){
+
+
+
+
+
+$scope.valores={};
+
+
+
+$scope.Sumar=function()
 {
-	
+	var resultado=parseInt($scope.valores.num1) + parseInt($scope.valores.num2) + parseInt($scope.valores.num3);
+
+	alert("El resultado es de " + resultado);
+
+
+
+
+
 }
-function Promedio () 
+
+$scope.Promedio=function()
 {
-	
+	var resultado=parseInt($scope.valores.num1) + parseInt($scope.valores.num2) + parseInt($scope.valores.num3);
+	alert("El resultado es de " + (resultado/3));
+
+
+
 }
-function PrecioFinal () 
+$scope.PrecioFinal=function()
 {
-	
+
+	var resultado=parseInt($scope.valores.num1) + parseInt($scope.valores.num2) + parseInt($scope.valores.num3);
+	var iva=resultado*0.21;
+	alert("El resultado es de " + (resultado + iva));
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
